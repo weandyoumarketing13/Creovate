@@ -61,7 +61,16 @@
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, .logo, .badge, .btn, .nav-link {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo,
+.badge,
+.btn,
+.nav-link {
   font-family: var(--font-heading);
 }
 
@@ -1799,7 +1808,7 @@ footer {
   z-index: 2;
   flex-shrink: 0;
   border: 8px solid #ffffff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .vm-circle img {
@@ -1855,20 +1864,25 @@ footer {
   .vm-new-container {
     flex-direction: column;
   }
+
   .vm-new-left {
     margin-bottom: 40px;
     text-align: center;
   }
+
   .vm-new-underline {
     margin: 0 auto;
   }
+
   .vm-box {
     padding: 30px;
   }
+
   .vm-box-mission {
     margin-left: -40px;
     padding-left: 60px;
   }
+
   .vm-box-vision {
     margin-right: -40px;
     padding-right: 60px;
@@ -1880,18 +1894,23 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+
   .vm-circle {
     margin: 0 auto;
   }
-  .vm-box-mission, .vm-box-vision {
+
+  .vm-box-mission,
+  .vm-box-vision {
     margin: -30px 0 0 0;
     padding: 40px 20px 20px;
     text-align: center;
     max-width: 100%;
   }
+
   .vm-block-vision {
     flex-direction: column-reverse;
   }
+
   .vm-block-vision .vm-box-vision {
     margin: 0 0 -30px 0;
     padding: 20px 20px 40px;
@@ -1929,7 +1948,14 @@ footer {
   .vm-quote-container {
     padding: 30px 20px;
   }
+
   .vm-quote-text {
     font-size: 1.1rem;
   }
+}
+
+a.service-card-new {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
