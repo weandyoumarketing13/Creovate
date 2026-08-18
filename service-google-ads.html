@@ -12,33 +12,28 @@
 
 <body>
 
+  <!-- Creative Ambient Background -->
+  <div class="ambient-bg">
+      <div class="ambient-orb orb-1"></div>
+      <div class="ambient-orb orb-2"></div>
+      <div class="ambient-orb orb-3"></div>
+  </div>
+
+
   <!-- Floating Light Navigation Header -->
   <header class="header-nav" id="mainHeader">
     <a href="index.html#home" class="logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
       <img src="assets/logo 3.PNG" alt="Creovate Media Labs Logo" class="logo-img">
       <span
-        style="font-weight: 800; letter-spacing: 0.05em; font-size: 1.1rem; color: var(--text-primary);">CREOVATE</span>
+        style="font-weight: 800; letter-spacing: 0.05em; font-size: 1.1rem; color: #000000;">CREOVATE</span>
     </a>
 
-    
-        <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); text-align: left; margin-bottom: 30px;">
-          When you need immediate, targeted visibility, Pay-Per-Click (PPC) advertising is unmatched. Our Google Ads strategies are laser-focused on maximizing your Return on Ad Spend (ROAS). We position your brand directly in front of users who are actively searching for your products or services.
-        </p>
-        
-        <div style="background: rgba(255,255,255,0.5); padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent-teal); margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.02);">
-            <h4 style="font-size: 1.3rem; margin-bottom: 15px; text-align: left; color: var(--text-primary);">Core Capabilities:</h4>
-            <ul class="nav-links" id="navLinks">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#home" class="nav-link active">Home</a></li>
       <li><a href="index.html#about" class="nav-link">About Us</a></li>
       <li><a href="index.html#services" class="nav-link">Services</a></li>
       <li><a href="contact.html" class="nav-link">Contact Us</a></li>
     </ul>
-        </div>
-
-        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); text-align: left; margin-bottom: 30px;">
-          We handle everything from exhaustive keyword research and compelling ad copy to bid management and continuous A/B testing. By rigorously analyzing conversion data and eliminating wasted spend, we ensure every dollar you invest works hard to acquire new customers.
-        </p>
-        
 
     <div class="nav-actions">
       <a href="contact.html" class="btn btn-primary btn-sm">Start Project</a>
@@ -50,27 +45,135 @@
     <div class="services-custom-container">
       <div class="services-title-wrapper reveal">
         <div class="services-title-top">
-          <span class="text-solid" style="opacity: 0.4; font-size: 1.2rem; letter-spacing: 0.3em; color: var(--text-tertiary);">SERVICE</span>
+          <span class="text-solid" style="opacity: 0.4; font-size: 1.2rem; letter-spacing: 0.3em; color: #94a3b8;">SERVICE</span>
         </div>
         <div class="services-title-bottom text-gradient" style="font-size: 4rem; font-weight: 900; margin-top: 10px; line-height: 1.1; text-shadow: 0 10px 30px rgba(0,0,0,0.05);">
           Google Ads Advertising
         </div>
       </div>
       <hr class="services-divider reveal">
-      <div class="reveal" style="max-width: 800px; margin: 40px auto; text-align: center;">
-        
-        
-        <ul style="list-style-type: none; padding: 0; text-align: left; max-width: 600px; margin: 20px auto; color: var(--text-tertiary); font-size: 1.1rem; line-height: 1.8;">
-          <li style="margin-bottom: 10px;">✓ Run paid ads on Google and other platforms</li>
-          <li style="margin-bottom: 10px;">✓ Target the right audience for quick results</li>
-          <li style="margin-bottom: 10px;">✓ Optimize campaigns for better ROI</li>
-          <li style="margin-bottom: 10px;">✓ Performance tracking & continuous monitoring</li>
-        </ul>
-    
-        <a href="contact.html" class="btn btn-primary" style="margin-top: 40px; display: inline-block;">Get Started</a>
+
+      <style>
+
+      
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+            animation: floatOrb 20s infinite alternate ease-in-out;
+        }
+        .orb-1 {
+            width: 50vw;
+            height: 50vw;
+            max-width: 600px;
+            max-height: 600px;
+            background: rgba(0, 201, 183, 0.08); /* Teal */
+            top: -10%;
+            left: -10%;
+        }
+        .orb-2 {
+            width: 40vw;
+            height: 40vw;
+            max-width: 500px;
+            max-height: 500px;
+            background: rgba(124, 58, 237, 0.06); /* Purple */
+            bottom: -10%;
+            right: -10%;
+            animation-delay: -5s;
+        }
+        .orb-3 {
+            width: 30vw;
+            height: 30vw;
+            max-width: 400px;
+            max-height: 400px;
+            background: rgba(37, 99, 235, 0.05); /* Blue */
+            top: 40%;
+            left: 60%;
+            animation-delay: -10s;
+        }
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, 80px) scale(1.1); }
+        }
+      
+
+        .service-layout-apple {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .service-layout-apple p {
+            font-size: 1.35rem; /* Larger, more prominent text */
+            line-height: 1.9;
+            color: #e2e8f0;
+            margin-bottom: 35px;
+            font-weight: 300; /* Lighter font weight for modern feel */
+            letter-spacing: 0.02em;
+        }
+        .service-capabilities-apple {
+            margin-top: 100px; /* Huge whitespace */
+            margin-bottom: 80px;
+        }
+        .service-capabilities-apple h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-teal);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        .service-list-apple {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px; /* Lots of horizontal space */
+        }
+        .service-list-apple li {
+            color: #f8fafc;
+            font-size: 1.15rem;
+            font-weight: 500;
+            text-align: center;
+            max-width: 280px;
+            line-height: 1.6;
+        }
+      </style>
+      
+      <div class="container" style="max-width: 1200px; margin: 0 auto; margin-top: 40px;">
+          <div class="service-layout-apple reveal">
+              <p>When you need immediate, targeted visibility, Pay-Per-Click (PPC) advertising is unmatched. Our Google Ads strategies are laser-focused on maximizing your Return on Ad Spend (ROAS). We position your brand directly in front of users who are actively searching for your products or services.</p>
+              <p>We handle everything from exhaustive keyword research and compelling ad copy to bid management and continuous A/B testing. By rigorously analyzing conversion data and eliminating wasted spend, we ensure every dollar you invest works hard to acquire new customers.</p>
+              
+              <div class="service-capabilities-apple reveal-scale">
+                  <h4>Core Capabilities</h4>
+                  <ul class="service-list-apple">
+                      <li>Run paid ads on Google and other platforms</li>
+                      <li>Target the right audience for quick results</li>
+                      <li>Optimize campaigns for better ROI</li>
+                      <li>Performance tracking & continuous monitoring</li>
+                  </ul>
+              </div>
+              
+              <div style="margin-top: 60px;" class="reveal">
+                  <a href="contact.html" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+          </div>
       </div>
-    </div>
-  </section>
+</section>
 
 <!-- Footer -->
   <footer>
@@ -81,7 +184,7 @@
             style="display:flex; align-items:center; gap:12px; margin-bottom:16px; text-decoration:none;">
             <img src="assets/logo 3.PNG" alt="Creovate Media Labs" class="logo-img">
             <span
-              style="font-weight: 800; letter-spacing: 0.05em; font-size: 1.15rem; color: var(--text-primary);">CREOVATE</span>
+              style="font-weight: 800; letter-spacing: 0.05em; font-size: 1.15rem; color: #000000;">CREOVATE</span>
           </a>
           <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 340px; line-height: 1.6;">
             At Creovate, we combine strategy, storytelling, and technology to help brands stand out in a crowded digital
@@ -102,15 +205,18 @@
           </ul>
         </div>
 
-        <div>
+                <div>
           <div class="footer-col-title">Core Services</div>
           <ul class="footer-links">
-            <li><a href="#services">Social Media Marketing</a></li>
-            <li><a href="#services">Talent Management</a></li>
-            <li><a href="#services">App & Web Development</a></li>
-            <li><a href="#services">Creative Ad Shoots</a></li>
-            <li><a href="#services">SEO & PPC Ads</a></li>
-            <li><a href="#services">E-Commerce Management</a></li>
+            <li><a href="service-branding.html">Branding Development</a></li>
+            <li><a href="service-email-marketing.html">Email Marketing</a></li>
+            <li><a href="service-google-ads.html">Google Ads Advertising</a></li>
+            <li><a href="service-seo.html">Search Engine Optimization</a></li>
+            <li><a href="service-smm.html">Social Media Marketing</a></li>
+            <li><a href="service-smo.html">Social Media Optimization</a></li>
+            <li><a href="service-software.html">Software Development</a></li>
+            <li><a href="service-ui-ux.html">UI/UX Design</a></li>
+            <li><a href="service-web-design.html">Web Design & Development</a></li>
           </ul>
         </div>
 
