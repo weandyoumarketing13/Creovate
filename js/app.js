@@ -65,6 +65,14 @@ function initNavbar() {
     mobileToggle.addEventListener('click', () => {
       navLinksContainer.classList.toggle('open');
     });
+
+    // Close menu when clicking a link inside it
+    const mobileLinks = navLinksContainer.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksContainer.classList.remove('open');
+      });
+    });
   }
 }
 

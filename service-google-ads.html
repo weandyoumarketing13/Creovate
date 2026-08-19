@@ -33,8 +33,9 @@
       <li><a href="index.html#about" class="nav-link">About Us</a></li>
       <li><a href="index.html#services" class="nav-link">Services</a></li>
       <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+    
+      <li class="mobile-only-btn"><a href="contact.html" class="btn btn-primary btn-sm mobile-start-project" style="margin-top: 20px; width: 100%;">Start Project</a></li>
     </ul>
-
     <div class="nav-actions">
       <a href="contact.html" class="btn btn-primary btn-sm">Start Project</a>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
@@ -150,6 +151,13 @@
             text-align: center;
             max-width: 280px;
             line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .service-layout-apple p { font-size: 1.05rem; line-height: 1.6; }
+            .service-capabilities-apple { margin-top: 50px; margin-bottom: 40px; }
+            .service-capabilities-apple h4 { margin-bottom: 30px; }
+            .service-list-apple { gap: 20px; flex-direction: column; align-items: center; }
         }
       </style>
       
