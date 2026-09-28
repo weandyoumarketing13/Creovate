@@ -13,15 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Scroll Reveal Intersection Observer */
 function initScrollReveal() {
-  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-up');
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+        obs.unobserve(entry.target); // Only animate once so it feels polished
       }
     });
-  }, { threshold: 0.12 });
+  }, { 
+      threshold: 0.1, 
+      rootMargin: '0px 0px -120px 0px' // Wait until the element is well within the screen
+  });
 
   revealElements.forEach(el => observer.observe(el));
 }
@@ -401,29 +405,3 @@ function filterMasterServices(category) {
 }
 
 
-/* ==========================================================================
-   INTERSECTION OBSERVER SCROLL ANIMATIONS
-   ========================================================================== */
-document.addEventListener('DOMContentLoaded', () => {
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-up');
-    
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const revealObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, revealOptions);
-    
-    revealElements.forEach(el => {
-        revealObserver.observe(el);
-    });
-});
